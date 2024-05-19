@@ -1,54 +1,80 @@
-print("Chào mừng đến trò chơi trả lời câu hỏi về Python")
+print("Chào mừng đến trò chơi Ai là triệu phú phiên bản python")
+a = input("Hãy nhập tên của bạn: ")
+print("Bạn đã sẵn sàng chưa", a)
+print("Bắt đầu thôi")
+
 dapandung = 0
-def A(): 
-  if dapan == "A" or "a":
-    print("Chính xác")
-    dapandung = dapandung+1
-  else:
-    print("Sai")
-def B():
-  if dapan == "B" or "b":
-    print("Chính xác")
-    dapandung = dapandung+1
-  else:
-    print("Sai")
-def C():
-  if dapan == "C" or "c":
-    print("Chính xác")
-    dapandung = dapandung+1
-  else:
-    print("Sai")
-def D():
-  if dapan == "D" or "d":
-    print("Chính xác")
-    dapandung = dapandung+1
-  else:
-    print("Sai")
 
+def kiem_tra_dap_an(dap_an_dung):
+    global dapandung
+    if dapan.lower() == dap_an_dung.lower():
+        print("Chính xác")
+        dapandung += 1
+    else:
+        print("Sai")
 
+while dapandung < 3:
+    print("LETS GO")
+    print("Level 1: 3 câu hỏi")
 
-print("LETS GO")
-print("Level 1: 3 câu hỏi")
-print("Python là gì?")
-print("A.Con rắn  B.máy tính  C.ngôn ngữ lập trình  D.hãng máy bay")
-dapan = input("Nhập đáp án: ")
-C()
-  
-print("Python được sáng tạo vào năm nào?")
-print("A.1991  B.1992  C.1993  D.1994 ")
-dapan = input("Nhập đáp án: ")
-A()
+    print("Python là gì?")
+    print("A. Con rắn  B. Máy tính  C. Ngôn ngữ lập trình  D. Hãng máy bay")
+    dapan = input("Nhập đáp án: ")
+    kiem_tra_dap_an("C")
 
-print("Python được tạo ra bởi ai?")
-print("A.Guido van Rossum  B.Albert Einstein  C.Leonardo DiCaprio  D.Sơn Tùng")
-dapan = input("Nhập đáp án: ")
-A()
+    print("Python được sáng tạo vào năm nào?")
+    print("A. 1991  B. 1992  C. 1993  D. 1994")
+    dapan = input("Nhập đáp án: ")
+    kiem_tra_dap_an("A")
 
-if dapandung == 3:
-  print("Bạn đã hoàn thành câu hỏi level 1 và tăng cấp thành level 2")
-  print("Level 2: 3 câu hỏi")
-else:
-  print("Bạn đã không hoàn thành được câu hỏi level 1")
-  print("Bạn không thể chơi câu hỏi level 2")
-  
+    print("Python được tạo ra bởi ai?")
+    print("A. Guido van Rossum  B. Albert Einstein  C. Leonardo DiCaprio  D. Sơn Tùng")
+    dapan = input("Nhập đáp án: ")
+    kiem_tra_dap_an("A")
 
+while 3 <= dapandung < 7:
+    print("LETS GO")
+    print("Level 2: 4 câu hỏi")
+
+    print("Python được tạo ra ở đâu?")
+    print("A. Mỹ  B. Hà Lan  C. Nga  D. Thụy Sĩ")
+    dapan = input("Nhập đáp án: ")
+    kiem_tra_dap_an("B")
+
+    print("Dấu so sánh trong Python là gì?")
+    print("A. >  B. <  C. =  D. ==")
+    dapan = input("Nhập đáp án: ")
+    kiem_tra_dap_an("D")
+
+    print("Câu lệnh lặp biết trước số lần lặp trong Python là gì?")
+    print("A. for  B. while  C. do while  D. repeat")
+    dapan = input("Nhập đáp án: ")
+    kiem_tra_dap_an("A")
+
+    print("if được dùng để làm gì trong Python?")
+    print("A. điều kiện  B. Lặp  C. đi  D. gán giá trị")
+    dapan = input("Nhập đáp án: ")
+    kiem_tra_dap_an("A")
+
+while 7 <= dapandung < 10:
+    print("LETS GO")
+    print("Level 3: 3 câu hỏi")
+
+    print("Biến được dùng để làm gì trong Python?")
+    print("A. in  B. Lặp  C. tạo điều kiện  D. gán giá trị")
+    dapan = input("Nhập đáp án: ")
+    kiem_tra_dap_an("D")
+
+    print("print được dùng để làm gì trong Python?")
+    print("A. in  B. Lặp  C. tạo điều kiện  D. gán giá trị")
+    dapan = input("Nhập đáp án: ")
+    kiem_tra_dap_an("A")
+
+    print("Câu hỏi cuối cùng")
+    print("import được dùng để làm gì trong Python?")
+    print("A. nhập khẩu  B. lấy dữ liệu từ thư viện có sẵn  C. xuất khẩu  D. chiết xuất dữ liệu")
+    dapan = input("Nhập đáp án: ")
+    kiem_tra_dap_an("B")
+
+if dapandung == 10:
+    print("Chúc mừng bạn đã trở thành triệu phú")
